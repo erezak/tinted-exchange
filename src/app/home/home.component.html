@@ -1,0 +1,97 @@
+<div class="container" fxLayout="column" fxLayout-sm="row"
+  fxLayoutGap="10px">
+  <mat-carousel
+        *ngIf="showcase.length" [@expand]
+        maxWidth="auto" maintainAspectRatio = false slideHeight="500px">
+    <mat-carousel-slide *ngFor="let item of showcase" overlayColor="darkred">
+      <h3>{{item.name | uppercase}}
+        <span *ngIf="item.label">
+          <mat-chip color="primary" selected> {{ item.label }} </mat-chip>
+        </span>
+      </h3>
+      <img src="{{ BaseURL + item.image }}" alt="{{item.name}}">
+      <p class="slide">{{item.description}}
+      </p>
+    </mat-carousel-slide>
+  </mat-carousel>
+  <div class="ng-tns-c6-0" [hidden]="showcase.length" [@expand]>
+    <mat-spinner></mat-spinner>
+    <h4>Loading . . . Please Wait</h4>
+  </div>
+</div>
+
+<!----
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column"
+  fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px">
+
+  <mat-card *ngIf="product" fxFlex [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{product.name | uppercase}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ BaseURL + product.image }}" alt={{product.name}}>
+    <mat-card-content>
+      <p>{{product.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <div fxFlex [hidden]="product || productErrMessage">
+    <mat-spinner></mat-spinner>
+    <h4>Loading . . . Please Wait</h4>
+  </div>
+  <div fxFlex *ngIf="productErrMessage">
+    <h2>Error</h2>
+    <h4>{{ productErrMessage }}</h4>
+  </div>
+
+
+
+  <mat-card *ngIf="promotion" fxFlex [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{promotion.name | uppercase}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ BaseURL + promotion.image}}" alt={{promotion.name}}>
+    <mat-card-content>
+      <p>{{promotion.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <div fxFlex [hidden]="promotion || promotionErrMessage">
+    <mat-spinner></mat-spinner>
+    <h4>Loading . . . Please Wait</h4>
+  </div>
+  <div fxFlex *ngIf="promotionErrMessage">
+    <h2>Error</h2>
+    <h4>{{ promotionErrMessage }}</h4>
+  </div>
+
+  <mat-card *ngIf="seller" fxFlex [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{seller.name | uppercase}} {{ seller.abbr | uppercase }}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ BaseURL + seller.image}}" alt={{seller.name}}>
+    <mat-card-content>
+      <p>{{seller.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <div fxFlex [hidden]="seller || sellerErrMessage">
+    <mat-spinner></mat-spinner>
+    <h4>Loading . . . Please Wait</h4>
+  </div>
+  <div fxFlex *ngIf="sellerErrMessage">
+    <h2>Error</h2>
+    <h4>{{ sellerErrMessage }}</h4>
+  </div>
+
+</div>
+
+--->

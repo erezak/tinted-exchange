@@ -1,0 +1,29 @@
+.ng-tns-c6-0 {
+    text-align: center !important;
+    color: whitesmoke;
+    text-shadow: 4px 6px 2px grey;
+}
+
+img {
+    max-height: 0px;
+}
+
+@media (min-width: 640px) {
+    img {
+        max-height: 35%;
+    }
+}
+
+@media (min-width: 920px) {
+    img {
+        max-height: 50%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    img {
+        max-height: 60%;
+    }
+}
+

@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome';
+@import '~@angular/material/theming';
+
+$lt-gray: #ddd;
+$divider-color:        #BDBDBD;
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-down $pad-left-right;
+}
+
+// basic resets
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+}
+
+.text-floral-white {
+    color: floralwhite!important;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+.highlight {
+  border: 1px solid;
+  z-index: 1;
+  transform: scale(1.01);
+}
